@@ -60,4 +60,15 @@ class TicTacToe
       move(index, current_player(board))
     end
   end
+
+  def turn_count()
+    turn = 0
+    @board.each do |space|
+      if space != " "
+        turn += 1
+      end
+    end
+
+    return turn
+  end
 end
