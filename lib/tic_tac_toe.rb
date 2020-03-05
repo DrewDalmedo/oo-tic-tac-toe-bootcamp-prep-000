@@ -151,4 +151,12 @@ class TicTacToe
 
     return false
   end
+
+  def winner()
+    winning_combo = won?()
+    if winning_combo == false
+      return nil
+    end
+    return @board[winning_combo[0]]
+  end
 end
