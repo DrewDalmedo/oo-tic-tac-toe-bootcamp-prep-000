@@ -46,8 +46,18 @@ class TicTacToe
   end
 
   def move(index, char)
-    if (valid_move?(@board, index))
+    if (valid_move?(index))
       @board[index] = char
+    end
+  end
+
+  def turn()
+    puts "Please enter 1-9: "
+    index = input_to_index(gets.strip.to_i)
+    if !(index >= 0 && index <= 8)
+      turn()
+    else
+      move(index, current_player(board))
     end
   end
 end
