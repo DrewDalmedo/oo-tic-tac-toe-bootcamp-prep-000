@@ -57,7 +57,7 @@ class TicTacToe
     if !(index >= 0 && index <= 8)
       turn()
     else
-      move(index, current_player(board))
+      move(index, current_player())
     end
   end
 
@@ -159,4 +159,6 @@ class TicTacToe
     end
     return @board[winning_combo[0]]
   end
+
+  
 end
