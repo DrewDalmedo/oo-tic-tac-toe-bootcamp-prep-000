@@ -44,4 +44,10 @@ class TicTacToe
     end
     return false
   end
+
+  def move(index, char)
+    if (valid_move?(@board, index))
+      @board[index] = char
+    end
+  end
 end
