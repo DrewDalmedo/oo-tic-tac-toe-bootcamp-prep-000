@@ -28,5 +28,11 @@ class TicTacToe
     return input.to_i - 1
   end
 
+  def position_taken?(index)
+    if !(@board[index] == " ")
+      return true
+    end
+    return false
+  end
 
 end
