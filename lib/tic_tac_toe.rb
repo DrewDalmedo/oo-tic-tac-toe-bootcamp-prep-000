@@ -125,4 +125,15 @@ class TicTacToe
 
     return false
   end
+
+  def full?()
+    @board.each do |space|
+      if space == " "
+        return false
+      end
+    end
+
+    return true
+  end
+
 end
